@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Item Catalog Project</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <a class="login__logout__link" href="{{url_for('gdisconnect')}}">Logout</a>
+  <div class="container">
+    <div class="categories">  
+      <h6 class="list__header">
+        <span class="header__title">Categories</span>
+        <span class="categories_header_bar"></span>
+      </h6>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul>
+            {% for message in messages %}
+              <li> <strong> {{ message }} </strong> </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+      <a class="add__category" href="{{url_for('newCategory')}}" ><span>Add New Category</span></a>
+      <a class="add__movie" href="{{url_for('addNewMovie')}}" ><span>Add New Movie</span></a>
+      <ul>  
+        {% for category in categories %}
+          <a href="{{url_for('showCategory', category_id = category.id )}}">
+            <li class="items__item">
+              <span class="item__name">{{category.name}}</span>
+              <span><a class="category__edit" href = "{{url_for('editCategory',category_id = category.id)}}">(Edit</a></span>
+              <span><a class="category__delete" href = "{{url_for('deleteCategory',category_id = category.id)}}">Delete)</a></span>
+            </li>
+          </a>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="latest__list">
+      <h6 class="list__header">
+        <span class="header__title">Latest Items</span>
+        <span class="latest_header_bar"></span>
+      </h6>
+      <ul>  
+        {% for latest_item in latest_items %}
+          <a href="{{url_for('showCategory', category_id = latest_item.category_id ,movie_id = latest_item.id )}}">
+            <li class="items__item">
+              <span class="item__name">{{latest_item.name}}</span>
+              <span class="item__type">({{latest_item.category.name}})</span>
+            </li>
+          </a>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

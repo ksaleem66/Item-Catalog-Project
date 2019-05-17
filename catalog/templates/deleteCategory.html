@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Item Catalog Project</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="page__spacing"></div>
+  <div class="container">
+    <h4> Are you sure you want to delete {{category.name}}? </h4>
+    <div>
+    <form action="#" method = 'post'>
+      <div class="page__spacing"></div>
+      <input type='submit', value = 'Delete'>
+      <a href = "{{url_for('showCategories')}}"> Cancel </a>
+    </form>
+    </div>
+  </div>
+</body>
+</html>

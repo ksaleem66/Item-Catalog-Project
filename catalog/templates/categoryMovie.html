@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Item Catalog Project</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <p class="login__logout__link"></p>
+  <div class="container">
+    <div>  
+      <h4 class="category-item__header">
+        <span class="header__title">{{categoryMovie.name}}</span>
+		    <span class="header__bar"></span>
+      </h4>
+      <div class="category-item__description">{{categoryMovie.description}}</div>
+      <div class="category-item__controls">
+        <a href="{{url_for('showCategory', category_id = categoryMovie.category_id)}}" class="controls__back">◃◃ Back</a>
+      </div>
+	  </div>
+  </div>
+</body>
+</html>

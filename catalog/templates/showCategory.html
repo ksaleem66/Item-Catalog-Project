@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Item Catalog Project</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <a class="login__logout__link" href="{{url_for('gdisconnect')}}">Logout</a>
+  <div class="container">
+    <div class="categories">  
+      <h6 class="list__header">
+        <span class="header__title">Categories</span>
+        <span class="categories_header_bar"></span>
+      </h6>
+      <ul>
+        {% for category in categories %}
+          <a href="{{url_for('showCategory', category_id = category.id )}}">
+            <li class="items__item">
+              <span class="item__name">{{category.name}}</span>
+            </li>
+          </a>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h6 class="list__header">
+	      <span class="header__title">{{categoryName}} Movies ({{categoryMoviesCount}} Items)</span>
+		    <span class="header__bar"></span>
+	    </h6>
+      <ul>
+        {% if categoryMovies !=[] %}
+          {% for categoryMovie in categoryMovies %}
+            <a href="{{url_for('showCategoryMovie', category_id = categoryMovie.category_id , movie_id = categoryMovie.id )}}">
+				      <li class="items__item">
+                <span class="item__name">{{categoryMovie.name}}</span>
+                <span><a class="movie__edit" href="{{url_for('editMovieItem', category_id = categoryMovie.category_id, movie_id = categoryMovie.id ) }}" >(Edit</a></span>
+                <span><a class="movie__delete" href="{{url_for('deleteMovieItem', category_id = categoryMovie.category_id, movie_id = categoryMovie.id ) }}" >Delete)</a></span>
+				      </li>
+			      </a>
+			    {% endfor %}
+        {% else %}
+          <p> No Movies availble for this category. </p>
+          <a href = "{{url_for('addNewMovie')}}">Create New Movie</a>
+        {% endif %}
+		  </ul>
+      <div class="bottom">
+		    <a href="{{url_for('showCategories')}}" class="controls__back">◃◃ Back</a>
+      </div>
+	  </div>
+	</div>
+</body>
+</html>
+

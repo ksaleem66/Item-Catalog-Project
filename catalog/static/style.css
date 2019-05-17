@@ -1,0 +1,251 @@
+/* The image used in this project was downloaded from internet*/
+
+* {
+  box-sizing: border-box;
+}
+
+body{ 
+  display: block;
+  color:#606c76;
+  font-family:"Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-size:1.2em;
+  font-weight:300;
+  letter-spacing:.01em;
+  line-height:1.6;
+}
+
+.container { 
+  display: flex;
+  border: 3px solid;
+  max-width: 70%;
+  margin: auto;
+  margin-top: 1%;
+  background-image: url("img/film-reel.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  object-fit: cover;
+}
+
+ul { 
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+/* Base Template */
+
+.header { 
+  background: #f4f5f6;
+  border-bottom: .1em solid #d1d1d1;
+  display: block;
+  height: 5.2em;
+  width: 100%;
+}
+
+.header .header__title { 
+  color: #606c76;
+  display: inline;
+  line-height: 5.2em;
+  position: relative;
+}
+
+.header__title .title__text { 
+  display: inline;
+  font-size: 1.1em;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #9b4dca;
+}
+
+/* Categories Template */
+
+.list__header .header__title {
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  display: block;
+  text-transform: capitalize;
+  padding-left: 30px;
+}
+
+.latest__list { 
+  height: 400px;
+}
+
+.categories_header_bar {
+  border-bottom: .5em solid #9b4dca;
+  height: .1em;
+  display: block;
+  width: 8em;
+  margin-left: 30px;
+}
+
+.latest_header_bar {
+  border-bottom: .5em solid #9b4dca;
+  height: .1em;
+  display: block;
+  width: 15em;
+  margin-left: 30px;
+}
+
+.list__header .header__bar {
+  border-bottom: .5em solid #9b4dca;
+  height: .1em;
+  display: block;
+  width: 15em;
+  margin-left: 30px;
+}
+
+.items__item .item__name {
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+.movie__name {
+  text-decoration: underline;
+}
+
+.items__item .item__type {
+  color: #606c76;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.latest__list .list__add {
+  font-size: .8em;
+  height: 2.8em;
+  line-height: 2.8em;
+  padding: 0 1.5em;
+}
+
+.page__spacing {
+  padding-top: 10%;
+  max-width: 70%;
+  margin: auto;
+  margin-top: 1%;
+}
+
+/* Category Item Template */
+
+.category-item__header .header__title {
+  font-weight: 700;
+  margin-bottom: 1em;
+  display: block;
+  text-transform: capitalize;
+  margin-left: 15px;
+}
+
+.category-item__header .header__bar {
+  border-bottom: .5em solid #9b4dca;
+  height: .1em;
+  display: block;
+  width: 5em;
+  margin-left: 15px;
+}
+
+.category-item__description {
+  margin-bottom: 1em;
+  padding-left: 15px;
+}
+
+.controls__back {
+  padding-left: 30px;
+
+}
+
+.add__category {
+  padding-left: 30px;
+  color: green;
+}
+
+.add__movie {
+  padding-left: 30px;
+  color: green;
+}
+
+.category__edit {
+  font-size: smaller; 
+  color: darkred;
+  padding-left: 15px;
+}
+
+.movie__edit {
+  font-size: smaller; 
+  color: darkred;
+  padding-left: 15px;
+}
+
+.category__delete {
+  font-size: smaller; 
+  color: darkred;
+}
+
+.movie__delete {
+  font-size: smaller; 
+  color: darkred;
+}
+
+/* Add Category Template */
+
+.category-item__form .form__label {
+  display: block;
+  font-size: 1.1em;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.category-item__form .form__textarea {
+  min-height: 30em;
+}
+
+/* Login Template */
+
+.login__container { 
+  border : 3px solid;
+  max-width: 50%;
+  margin: auto;
+  height: 300px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-top: 10%;
+  text-align: center;
+  background-image: url("img/film-reel.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  object-fit: cover;
+}
+
+.login__logout__link {
+  display: block;
+  max-width: 70%;
+  margin: auto;
+  text-align: right;
+  padding-right: 30px;
+  margin-top: 10%;
+}
+
+.login__button--google {
+  width: 180px;
+  height: 28px;
+  background: #da4635;
+  border-color: #da4635;
+  border-radius: 5px;
+}
+
+.bottom {
+  position: absolute;
+  height: 10px;*/
+  bottom: 30;
+  left: 30;
+}
+
+/* Media query for different screen size */
+
+@media (min-width: 40.0em) {
+  .categories {
+	border-right: .1em solid #d1d1d1;
+	margin-right: 2em;
+	padding-right: 40px;
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Item Catalog Project</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="page__spacing"></div>
+  <div class="container">
+    <h4> Edit Category </h4>
+    <form action="{{ url_for('editCategory',category_id = category.id)}}" method = 'post'>
+      <div class="page__spacing"></div>
+	    <p>Name:</p>
+      <input type ='text' size='30' name='name' placeholder = '{{category.name }}'>
+      <input type='submit' value='Edit'>
+      <a href = "{{url_for('showCategories')}}"> Cancel </a>
+    </form>
+  </div>
+</body>
+</html>

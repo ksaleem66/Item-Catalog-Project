@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Item Catalog Project</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="page__spacing"></div>
+  <div class="container">
+    <h4> Edit Movie Item </h4>
+    <form action="#" method = 'post'>
+      <div class="page__spacing"></div>
+	    <p>Name:</p>
+        <input type ='text' size='30' name='name' placeholder = '{{movie.name }}'>
+	    <p>Description:</p>
+        <input type ='text' size='30' name='description' placeholder = '{{movie.description}}'>
+        <input type='submit' value='Edit'>
+      <a href = "{{url_for('showCategories')}}"> Cancel </a>
+    </form>
+  </div>
+</body>
+</html>
